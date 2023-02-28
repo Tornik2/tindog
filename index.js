@@ -1,7 +1,6 @@
 import {dogs} from '/data.js'
 import {Dogs} from '/Dog.js'
 
-const nopeBadge = document.getElementById('nope-badge')
 const dogRex = new Dogs(dogs[0])
 const dogBella = new Dogs(dogs[1])
 const dogTeddy = new Dogs(dogs[2])
@@ -12,7 +11,9 @@ let currentDog = []
 function getNewDog() {
 currentDog = dogsArray.shift()
 document.getElementById('dogs').innerHTML = currentDog.getDogsHtml()
+currentDog.hasBeenLiked = false
 return currentDog
+
 }
 getNewDog()
 
@@ -24,7 +25,8 @@ getNewDog()
             setTimeout(getNewDog, 700);} else {            
             currentDog.hasBeenLiked = true
             document.getElementById("like-badge").classList.add('appear')
-            setTimeout(getEndMessage, 900)
+            dogsArray = [dogRex, dogBella, dogTeddy]
+            setTimeout(getNewDog, 900)
                 }    
             }
     })
@@ -36,7 +38,8 @@ getNewDog()
             setTimeout(getNewDog, 700);} else {
             currentDog.hasBeenLiked = true
             document.getElementById("nope-badge").classList.add('appear')
-            setTimeout(getEndMessage, 900)       
+            dogsArray = [dogRex, dogBella, dogTeddy]
+            setTimeout(getNewDog, 900)       
                 }
             }
     })
