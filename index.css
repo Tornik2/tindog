@@ -9,7 +9,6 @@ html {
     width: 90vw;
     min-width: 350px;
     background: #F6F7FB;   
-    
 }
 
 @media (min-width: 600px) {
@@ -84,7 +83,7 @@ Dog Description
  .bio {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #B7B7B7;
+    color: #ddd7d7;
 }
 
 /*=================

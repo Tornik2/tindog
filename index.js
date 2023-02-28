@@ -35,6 +35,6 @@ getNewDog()
     })
 function getEndMessage() {
     let message = `<div class="end">No More Doggies </div> `
-    document.getElementById('container').style.paddingTop = '200px'
+    document.getElementById('container').style.padding = '300px 0'
     document.getElementById('container').innerHTML = message
 }
