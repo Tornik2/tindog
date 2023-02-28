@@ -9,7 +9,7 @@ html {
     width: 90vw;
     min-width: 350px;
     background: #F6F7FB;   
-    height: 100vh;
+    
 }
 
 @media (min-width: 600px) {
