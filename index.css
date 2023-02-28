@@ -6,12 +6,13 @@ html {
 }
 .container {
     box-sizing: border-box;
-    width: 90vw;
+    width: 90%;
+    margin: 0 auto;
     min-width: 350px;
     background: #F6F7FB;   
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
     .container{
         width: 550px;
         margin: 0 auto;
