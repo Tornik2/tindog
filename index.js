@@ -21,10 +21,10 @@ getNewDog()
     if (currentDog.hasBeenLiked === false) { if (dogsArray.length) {
             currentDog.hasBeenLiked = true
             document.getElementById("like-badge").classList.add('appear')
-            setTimeout(getNewDog, 500);} else {            
+            setTimeout(getNewDog, 700);} else {            
             currentDog.hasBeenLiked = true
             document.getElementById("like-badge").classList.add('appear')
-            setTimeout(getEndMessage, 1500)
+            setTimeout(getEndMessage, 900)
                 }    
             }
     })
@@ -33,10 +33,10 @@ getNewDog()
         if (currentDog.hasBeenLiked === false) {if (dogsArray.length) {
             currentDog.hasBeenLiked = true
             document.getElementById("nope-badge").classList.add('appear')
-            setTimeout(getNewDog, 600);} else {
+            setTimeout(getNewDog, 700);} else {
             currentDog.hasBeenLiked = true
             document.getElementById("nope-badge").classList.add('appear')
-            setTimeout(getEndMessage, 700)       
+            setTimeout(getEndMessage, 900)       
                 }
             }
     })
