@@ -16,23 +16,31 @@ return currentDog
 }
 getNewDog()
 
+
  document.getElementById('like').addEventListener('click', function () {
-    if (dogsArray.length) {
+    if (currentDog.hasBeenLiked === false) { if (dogsArray.length) {
+            currentDog.hasBeenLiked = true
             document.getElementById("like-badge").classList.add('appear')
-            setTimeout(getNewDog, 500);} else {
+            setTimeout(getNewDog, 500);} else {            
+            currentDog.hasBeenLiked = true
             document.getElementById("like-badge").classList.add('appear')
             setTimeout(getEndMessage, 1500)
                 }    
+            }
     })
 
   document.getElementById('dislike').addEventListener('click', function() {
-        if (dogsArray.length) {
+        if (currentDog.hasBeenLiked === false) {if (dogsArray.length) {
+            currentDog.hasBeenLiked = true
             document.getElementById("nope-badge").classList.add('appear')
             setTimeout(getNewDog, 600);} else {
+            currentDog.hasBeenLiked = true
             document.getElementById("nope-badge").classList.add('appear')
             setTimeout(getEndMessage, 700)       
                 }
+            }
     })
+
 function getEndMessage() {
     let message = `<div class="end">No More Doggies </div> `
     document.getElementById('container').style.padding = '300px 0'
